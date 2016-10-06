@@ -6,6 +6,7 @@ deps:
 ks.cfg:
 	system-config-kickstart --generate ks.cfg
 
-ROOT_PW := beif1Tiepao4oov2
+# TODO change me!
+ROOT_PW := toor
 rootpw:
 	python -c 'import crypt; print(crypt.crypt("$(ROOT_PW)"))' > rootpw
