@@ -1,0 +1,7 @@
+#System authorization infomation
+auth  --useshadow  --enablemd5
+#Network information
+network --bootproto=dhcp --device=eth0
+#Firewall configuration
+firewall --disabled 
+
