@@ -39,10 +39,6 @@ clean:
 	rm -f txt.cfg
 	rm -f ubuntu-16.04.1-server-amd64-ks.iso
 
-.PHONY: ssh
-ssh:
-	ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -p 9122 root@localhost
-
 # how to generate a ks.cfg
 .PHONY: deps
 deps:

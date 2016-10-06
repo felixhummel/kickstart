@@ -12,6 +12,7 @@ How do I use this?
 
 What do I need to run this?
 ===========================
+- ``ubuntu-16.04.1-server-amd64.iso`` (http://releases.ubuntu.com/16.04/)
 - Virtualbox (``which vboxmanage``)
 - a good DHCP config, so a NATed VM can find your host by its FQDN
 - free ports
