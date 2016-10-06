@@ -34,9 +34,9 @@ ubuntu-16.04.1-server-amd64-ks.iso: target/isolinux/txt.cfg target/isolinux/isol
 
 .PHONY: clean
 clean:
-	sudo rm -f target/isolinux/txt.cfg
-	sudo rm -f target/isolinux/isolinux.cfg
+	sudo rm -rf target/
 	rm -f ks.cfg
+	rm -f txt.cfg
 	rm -f ubuntu-16.04.1-server-amd64-ks.iso
 
 .PHONY: ssh
