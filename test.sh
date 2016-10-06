@@ -18,3 +18,4 @@ trap finally EXIT SIGINT
 # should print "OK" and "Installation took N seconds"
 ./vm_wait_for_ssh.sh
 
+./vm_clean.sh
