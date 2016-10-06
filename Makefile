@@ -1,5 +1,5 @@
 # https://help.ubuntu.com/lts/installation-guide/amd64/ch04s06.html
-ROOT_PW_ENC := $(shell python -c 'import crypt; print(crypt.crypt("toor"))')
+ROOT_PW_ENC := $(shell python3 -c 'import crypt; print(crypt.crypt("toor"))')
 KICKSTART_CONFIG_URL := http://$(shell hostname -f):9080/ks.cfg
 # empty, if no key exists (which is what we want)
 SSH_PUBKEY := $(shell cat $$HOME/.ssh/id_rsa.pub 2>/dev/null)

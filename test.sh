@@ -5,7 +5,12 @@ set -euo pipefail
 make
 
 # serve ks.cfg
-python -mSimpleHTTPServer 9080 &
+python3 -mhttp.server 9080 &
+pid=$!
+finally() {
+  kill $pid
+}
+trap finally EXIT SIGINT
 
 # create and run the vm; this goes to the background automatically
 ./vm_run.sh
