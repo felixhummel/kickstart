@@ -14,7 +14,7 @@ timezone --utc Europe/Berlin
 #Network information
 network --bootproto=dhcp --device=eth0
 #Root password
-rootpw --iscrypted $6$b.GJdmK8cFFrImS7$V7/opeSK4N5JoP7/vbO2fq/oVucTw/rrT1.YRZghZ45JT0O5D0SkQPyfVIX7a.jRbWM97NRbGtgKDLC10fomb1
+rootpw --iscrypted ROOT_PW_ENC
 #Initial user
 user --disabled
 #Reboot after installation
@@ -26,7 +26,7 @@ install
 #Use CDROM installation media
 cdrom
 #System bootloader configuration
-bootloader --location=mbr 
+bootloader --location=mbr
 #Clear the Master Boot Record
 zerombr yes
 #Partition clearing information
@@ -44,5 +44,7 @@ openssh-server
 env > /var/tmp/hello.env
 mkdir -p /root/.ssh
 chmod 700 /root/.ssh
-echo 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDAcilvkjPutBAUauaIoyoAxmBXjsjP2zQ8gyt2oXtfmaUg6OyVpKXPANq27WKOglHKeifq0eX5GPc/qhVsqUwV7BUMsCcBYv9fFWNtP2yrODE7ahyzvEPiIi7nZFeeNUM+kQflh1k1UbZP1/MTWxP8rgEkgGJ4TPUYyxcpwKzHS03mNUYx/noUpdBfxi0bToazKMis5v8x30cF02r3dhF7x5yob2sAaCcDa59wXqGoDH9sx6r7C12ZTyFxVU2ISNZBLOgqxr1RYhmyAt8KBndiX+zZDAb0Q/ZB5/0EGx6sVKS16H+0LyG7Uoy/QxZ1CNboMLmlVeNvG+1/TafXjErl96RdSauhG7HSvZ801YVaufPa8HODBlGtVOtbVNpL6sxZLMQm/Bvv1i34QhtqF3l7BjV5x9kF7Uu7VTEkXiPCl6BMRPH+pfqQFLrnW7pbWkPhTELSRzbOw0PvHAk+w6e0Ue+es8tAxpzOUgTZR5aNHB06pkPEDAdUS98mpEXeC8axqW3SfElVnFL83U/yMq2cJzJNCIsl10SSvvyYbluRbZ26+Soep06H70JiA0GmBUTuSQtRxakXM4np2k5wOwWc74Cn9auRKiqffrGkpe80hE/DD6+R5ncIIz41+mhxQEjDtTANoUX5WWOKw/2NaaNzFM5W8YafjimnWIoCq8GCJQ== felix@lab' >> /root/.ssh/authorized_keys
+echo 'MY_PUBKEY' >> /root/.ssh/authorized_keys
 chmod 600 /root/.ssh/authorized_keys
+
+# .. vim: set ft=cfg :
