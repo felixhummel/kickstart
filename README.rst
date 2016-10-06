@@ -1,10 +1,29 @@
-Usage:
+What is this?
+=============
+Kickstart Ubuntu 16.04 with Virtualbox-based test.
 
-- create Virtualbox VM
-    - set Image to ubuntu-16.04.1-server-amd64-ks.iso created here
-    - set NAT forward from guest:22 to 127.0.0.1:9122
-- run
-- get a coffee
-- ``ssh -p 9122 root@localhost``
-- rejoice
+
+How do I use this?
+==================
+::
+
+    ./test.sh
+
+
+What do I need to run this?
+===========================
+- Virtualbox (``which vboxmanage``)
+- a good DHCP config, so a NATed VM can find your host by its FQDN
+- ``sudo``
+- ``make``
+- ``bash``
+- ``python``
+
+
+Clean up please!
+================
+::
+
+    make clean
+    ./vm_clean.sh
 
