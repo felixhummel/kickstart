@@ -41,3 +41,15 @@ rsync --progress -a rsync://de.archive.ubuntu.com/ubuntu/dists/xenial-updates fi
 ok, wir brauchen einen mirror (oder netz beim install)
 
 mirror hat ca 70GB: https://wiki.ubuntuusers.de/apt-mirror/
+
+stuff we need
+=============
+- 2 VMs
+    - ``pxe`` is the dnsmasq [DHCP, TFTP, NAT, HTTP] server
+    - ``pxe-booter`` is configured to boot from HDD, then PXE (for reboots).
+      Used for testing.
+- salt on ``pxe`` to configure
+    - dnsmasq
+    - files on {/var/lib/tftpboot,/var/www}
+    - nginx (to serve cfg and optionally the ubuntu mirror)
+
