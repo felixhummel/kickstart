@@ -1,0 +1,7 @@
+default ubuntu-16.04.1-server-amd64
+label ubuntu-16.04.1-server-amd64
+	menu label ^Install
+	menu default
+	kernel linux
+	append vga=788 initrd=initrd.gz ks=http://pxe.athome/ubuntu-16.04.1-server-amd64.cfg
+
